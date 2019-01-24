@@ -1,3 +1,5 @@
+# vue-closable
+
 If you're looking for a quick way to detect clicks outside of an element in Vue, then this simple directive is what you need.
 
 ## Setup
@@ -100,6 +102,10 @@ export default {
 }
 </script>
 ```
+
+## Bonus
+
+In case you're interested, I wrote an article on how I created this directive: [An Easy Way to Detect Clicks Outside an Element in Vue](https://tahazsh.com/detect-outside-click-in-vue).
 
 ## License
 
