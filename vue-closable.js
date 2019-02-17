@@ -12,7 +12,7 @@ vueClosable.install = function (Vue) {
         e.stopPropagation()
         // Get the handler method name and the exclude array
         // from the object used in v-closable
-        const { handler, exclude } = binding.value
+        const { handler, exclude = [] } = binding.value
 
         // This variable indicates if the clicked element is excluded
         let clickedOnExcludedEl = false

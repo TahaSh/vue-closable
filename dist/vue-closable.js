@@ -25,7 +25,7 @@
           // from the object used in v-closable
           var ref = binding.value;
           var handler = ref.handler;
-          var exclude = ref.exclude;
+          var exclude = ref.exclude; if ( exclude === void 0 ) exclude = [];
 
           // This variable indicates if the clicked element is excluded
           var clickedOnExcludedEl = false;
