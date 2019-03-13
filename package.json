@@ -1,6 +1,6 @@
 {
   "name": "vue-closable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/vue-closable.js",
   "description": "A simple vue directive to detect outside clicks",
   "license": "MIT",

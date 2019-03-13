@@ -1,5 +1,5 @@
 /**
- * vue-closable v0.0.0
+ * vue-closable v0.0.2
  * (c) 2019 Taha Shashtari
  * @license MIT
  */
@@ -35,9 +35,11 @@
             if (!clickedOnExcludedEl) {
               // Get the element using the reference name
               var excludedEl = vnode.context.$refs[refName];
-              // See if this excluded element
-              // is the same element the user just clicked on
-              clickedOnExcludedEl = excludedEl.contains(e.target);
+              if (excludedEl) {
+                // See if this excluded element
+                // is the same element the user just clicked on
+                clickedOnExcludedEl = excludedEl.contains(e.target);
+              }
             }
           });
 
