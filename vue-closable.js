@@ -21,7 +21,11 @@ vueClosable.install = function (Vue) {
           // any excluded element yet
           if (!clickedOnExcludedEl) {
             // Get the element using the reference name
-            const excludedEl = vnode.context.$refs[refName]
+            let excludedEl = vnode.context.$refs[refName]
+            // Get the actual element if it is a Vue component
+            excludedEl = (excludedEl instanceof Vue)
+              ? excludedEl.$el
+              : excludedEl
             if (excludedEl) {
               // See if this excluded element
               // is the same element the user just clicked on

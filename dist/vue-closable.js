@@ -1,5 +1,5 @@
 /**
- * vue-closable v0.0.2
+ * vue-closable v0.0.3
  * (c) 2019 Taha Shashtari
  * @license MIT
  */
@@ -35,6 +35,10 @@
             if (!clickedOnExcludedEl) {
               // Get the element using the reference name
               var excludedEl = vnode.context.$refs[refName];
+              // Get the actual element if it is a Vue component
+              excludedEl = (excludedEl instanceof Vue)
+                ? excludedEl.$el
+                : excludedEl;
               if (excludedEl) {
                 // See if this excluded element
                 // is the same element the user just clicked on
